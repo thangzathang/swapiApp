@@ -17,7 +17,7 @@ export default function Home() {
         <p className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus similique necessitatibus. Nostrum dolorum nemo eum ratione ad quisquam quasi qui placeat ducimus natus. Corporis?</p>
         <p className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus similique necessitatibus. Nostrum dolorum nemo eum ratione ad quisquam quasi qui placeat ducimus natus. Corporis?</p>
         <Link href="/films">
-          <a className={styles.btn}>See all jedi</a>
+          <a className={styles.btn}>See all Films List</a>
         </Link>
       </div>
     </>

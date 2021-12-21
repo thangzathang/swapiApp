@@ -35,3 +35,9 @@ footer {
   color: #777;
   border-top: 1px solid #eaeaea;
 }
+
+/* For Footer github link */
+.github a {
+  color: #4979ff;
+  text-decoration: underline;
+}

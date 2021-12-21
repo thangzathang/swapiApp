@@ -16,7 +16,7 @@ const Navbar = () => {
         <a>About</a>
       </Link>
       <Link href="/films">
-        <a>Jedi Masters</a>
+        <a>SW Movies</a>
       </Link>
     </nav>
   );
