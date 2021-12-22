@@ -28,7 +28,7 @@ const Films = ({ films }) => {
       </div>
       <div className="filmFlexContainer">
         {films.map((film, index) => (
-          <Film key={index} index={index} film={film} />
+          <Film key={index} index={index} url={film.url} />
         ))}
       </div>
     </div>
