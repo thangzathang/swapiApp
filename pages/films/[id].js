@@ -46,7 +46,7 @@ const FilmDetail = ({ film }) => {
         {'"'}
       </h3>
       <div>
-        <Link href="/">Back to Movie List</Link>
+        <Link href="/films">Back to Movie List</Link>
       </div>
     </div>
   );
