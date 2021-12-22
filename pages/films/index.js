@@ -7,7 +7,9 @@ export const getStaticProps = async () => {
   const APILink = "https://swapi.dev/api/films/";
   const res = await fetch(APILink);
   const parsedJSON = await res.json();
-  const data = parsedJSON.results;
+  const data = await parsedJSON.results;
+
+  console.log("URL :", data);
 
   return {
     props: {
