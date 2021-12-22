@@ -1,6 +1,6 @@
-import styles from "../../styles/Films.module.css";
-
 import Link from "next/link";
+
+import Film from "./Film";
 
 // This function will run at build time.
 export const getStaticProps = async () => {
@@ -20,15 +20,15 @@ const Films = ({ films }) => {
   return (
     <div>
       <h1>The Films</h1>
-      {films.map((film, index) => (
-        <Link href={`/films/` + film.url.split("/")[5]} key={film.url.split("/")[5]}>
-          <a className={styles.single}>
-            <h3>
-              {index + 1}. {film.title}
-            </h3>
-          </a>
-        </Link>
-      ))}
+      <div className="searchInput">
+        <label htmlFor="">Movie Name: </label>
+        <input type="text" name="filmSearch" />
+      </div>
+      <div className="filmFlexContainer">
+        {films.map((film, index) => (
+          <Film key={index} film={film} index={index} />
+        ))}
+      </div>
     </div>
   );
 };

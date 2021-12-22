@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="github">
+    <div className="footer">
       <p>Copyright 2021 SWAPI API App by Thang Za Thang</p>
       <p>
         github:{" "}
