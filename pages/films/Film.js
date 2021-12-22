@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Film({ film, index }) {
-  const date = film.release_date.split("-");
-  const formattedDate = date[2] + "/" + date[1] + "/" + date[0];
+  //   const date = film.release_date.split("-");
+  //   const formattedDate = date[2] + "/" + date[1] + "/" + date[0];
 
   console.log(film);
   return (
@@ -17,8 +17,8 @@ function Film({ film, index }) {
           {film.title}
         </Link>
       </h1>
-      <h2>Directed By: {film.director}</h2>
-      <h3>Release Date: {formattedDate}</h3>
+      {/* <h2>Directed By: {film.director}</h2>
+      <h3>Release Date: {formattedDate}</h3> */}
     </div>
   );
 }
