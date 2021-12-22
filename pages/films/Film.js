@@ -17,8 +17,8 @@ function Film({ film, index }) {
           {film.title}
         </Link>
       </h1>
-      {/* <h2>Directed By: {film.director}</h2>
-      <h3>Release Date: {formattedDate}</h3> */}
+      <h2>Directed By: {film.director}</h2>
+      <h3>Release Date: {film.release_date}</h3>
     </div>
   );
 }
