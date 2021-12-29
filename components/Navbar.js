@@ -18,7 +18,7 @@ const Navbar = () => {
         <a>About</a>
       </Link>
       <Link href="/films">
-        <a>SW Movies</a>
+        <a>Movies</a>
       </Link>
     </nav>
   );
