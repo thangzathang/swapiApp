@@ -21,7 +21,6 @@ body {
 }
 
 a {
-  color: #fff;
   text-decoration: none;
 }
 .content {
@@ -76,7 +75,11 @@ footer {
 }
 
 // Universal Colour
-
 .primary {
   color: #fff;
+}
+
+// Makes it so the computed dates don't show up.
+.noDisplay {
+  display: none;
 }

@@ -16,7 +16,6 @@ body {
 }
 
 a {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -76,5 +75,9 @@ footer {
 
 .primary {
   color: #fff;
+}
+
+.noDisplay {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
