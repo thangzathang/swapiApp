@@ -23,10 +23,13 @@ body {
 a {
   text-decoration: none;
 }
+
 .content {
   max-width: 1400px;
   margin: 0 auto;
+  // height: 100vh;
   // background-color: yellow;
+  padding: 2rem;
 }
 
 // Nav
@@ -42,15 +45,29 @@ nav {
 
 nav a {
   margin-left: 2.5rem;
+  color: #fff;
+  font-weight: 800;
 }
 
 nav a:hover {
   font-weight: bold;
   transform: scale(1.3);
+  color: #ffa835;
 }
 
 nav .logo {
   margin-right: auto;
+}
+
+// Mobile Query
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .title {
+    margin: 2rem auto;
+  }
 }
 
 // Footer
@@ -64,14 +81,23 @@ footer {
 }
 
 /* For Footer github link */
-.footer a {
-  color: #4979ff;
-  text-decoration: underline;
-}
 
 // Footer Styles
 .footer {
-  margin: 4rem 0 2rem;
+  position: static;
+  bottom: 2rem;
+  margin: 2rem auto;
+}
+
+.footer a {
+  color: #ec8600;
+  // text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ff9a16;
+  border-bottom: 1px solid #ec8600;
+  transform: scale(1.3);
 }
 
 // Universal Colour
@@ -82,4 +108,16 @@ footer {
 // Makes it so the computed dates don't show up.
 .noDisplay {
   display: none;
+}
+
+.gitLink {
+  font-weight: 600;
+  color: rgb(211, 211, 0);
+}
+
+//
+.textContent {
+  p {
+    color: #fff;
+  }
 }

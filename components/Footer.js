@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div className="footer">
-      <p>&copy; 2021 SWAPI API App by Thang Za Thang</p>
+    <div className="footer primary">
+      <p>&copy; 2022 SWAPI API App by Thang Za Thang</p>
       <p>
         github:{" "}
         <a href="https://github.com/thangzathang/swapiApp" target="_blank" rel="noreferrer">

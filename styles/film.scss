@@ -47,9 +47,17 @@
   }
 }
 
+// Control the image size for individual films
 .imageContainer {
   max-width: 14rem;
   margin: 0 auto;
+}
+
+//  Control the image size for headshot films
+.imageContainerProfile {
+  max-width: 14rem;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
 }
 
 .searchInput {

@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import Film from "./Film";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -19,8 +18,19 @@ export const getStaticProps = async () => {
 };
 
 const Films = ({ films }) => {
-  const [filteredFilms, setFilteredFilms] = useState("");
+  // State for the search term
+  const [search, setSearch] = useState("");
 
+  // handleChange for every word/ keystroke entered
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  // const [filteredFilms, setFilteredFilms] = useState(initialState);
+  let filteredFilms;
+  filteredFilms = films.filter((film) => film.title.toLowerCase().includes(search.toLowerCase()));
+
+  // Set date later when the film Release date is loaded.
   let day = 0;
   let month = 0;
   let year = 0;
@@ -29,10 +39,10 @@ const Films = ({ films }) => {
     <div>
       <div className="searchInput">
         <label htmlFor="">Search: </label>
-        <input className="searchInputField" type="text" name="filmSearch" />
+        <input className="searchInputField" type="text" name="search" value={search} onChange={handleChange} />
       </div>
       <div className="filmFlexContainer">
-        {films.map((film, index) => (
+        {filteredFilms.map((film, index) => (
           <div key={index} className="filmContainer">
             <div className="imageContainer">
               <Image src={`/poster${film.episode_id}.jpg`} width={350} height={500} alt={`Star wars poster for ep ${film.episode_id}`} />

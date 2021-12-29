@@ -1,17 +1,37 @@
 .title {
   padding-bottom: 20px;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .btn {
   display: block;
-  width: 150px;
-  padding: 8px 0;
-  margin: 20px auto;
-  background: #4979ff;
-  border-radius: 4px;
+
   color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
   text-align: center;
+
+  width: 250px;
+  padding: 8px 0;
+  margin: 3rem auto;
+  border-radius: 8px;
+  background: #ec8600;
+}
+
+.btn:hover {
+  transform: translateY(-8px);
+}
+
+/* Home page  */
+.textContent {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.textTitle {
+  font-size: 1.6rem;
+  font-weight: 900;
 }
 
 /* 404 error page */
