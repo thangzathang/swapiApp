@@ -9,7 +9,9 @@ const About = () => {
         <title>SWAPI | About</title>
         <meta name="keywords" content="swapi" />
       </Head>
-      <h1 className="title primary">Who am I? I am Thang, fullstack web developer</h1>
+      <h1 className="title primary">
+        Hi, I am Thang, <br />a fullstack web developer
+      </h1>
       <div className="textContent">
         <div className="imageContainerProfile">
           <Image src="/headshot.png" width={550} height={660} alt="Headshot of Thang Za Thang" />
