@@ -35,12 +35,10 @@ export const getStaticProps = async (context) => {
 };
 
 const FilmDetail = ({ film }) => {
-  console.log(film);
-  console.log("Characters:", film.characters);
-
-  const charactersList = film.characters[0];
-
+  // Formatted the dates
   const formattedDate = film.created.split("T", 1);
+
+  // let listOfSpecies = getData("species");
 
   return (
     <div className="primary">
@@ -50,6 +48,7 @@ const FilmDetail = ({ film }) => {
       <h2>Producer: {film.producer}</h2>
       <h2>Release date: {film.release_date}</h2>
       <h4>Opening Crawl: {film.opening_crawl}</h4>
+
       <div>
         <Link href="/films">
           <a className="btn">Back to Movie List</a>
