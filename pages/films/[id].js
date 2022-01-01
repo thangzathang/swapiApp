@@ -35,18 +35,25 @@ export const getStaticProps = async (context) => {
 };
 
 const FilmDetail = ({ film }) => {
+  console.log(film);
+  console.log("Characters:", film.characters);
+
+  const charactersList = film.characters[0];
+
+  const formattedDate = film.created.split("T", 1);
+
   return (
-    <div>
+    <div className="primary">
       <h1>{film.title}</h1>
-      <h3>Director: {film.director}</h3>
-      <h3>
-        <strong>Premise: </strong> <br />
-        {'"'}
-        {film.opening_crawl}
-        {'"'}
-      </h3>
+      <h2>Director: {film.director}</h2>
+      <h2>Created At: {formattedDate}</h2>
+      <h2>Producer: {film.producer}</h2>
+      <h2>Release date: {film.release_date}</h2>
+      <h4>Opening Crawl: {film.opening_crawl}</h4>
       <div>
-        <Link href="/films">Back to Movie List</Link>
+        <Link href="/films">
+          <a className="btn">Back to Movie List</a>
+        </Link>
       </div>
     </div>
   );
