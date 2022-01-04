@@ -1,6 +1,7 @@
 // Next JS Components
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const APILink = "https://swapi.dev/api/films/";
 
@@ -135,27 +136,52 @@ const FilmDetail = ({ film, characters, species, starships, vehicles, planets })
 
   return (
     <div className="primary">
-      <h1>{film.title}</h1>
-      <h2>Director: {film.director}</h2>
-      <h2>Created At: {formattedDate}</h2>
-      <h2>Producer: {film.producer}</h2>
-      <h2>Release date: {film.release_date}</h2>
-      <h4>Opening Crawl: {film.opening_crawl}</h4>
-      <br />
-      <h3>Characters</h3>
-      {printListOfChar}
-      <br />
-      <h3>Starships</h3>
-      {printListOfStarships}
-      <br />
-      <h3>Species</h3>
-      {printListOfSpecies}
-      <br />
-      <h3>Vehicles</h3>
-      {printListOfVehicles}
-      <br />
-      <h3>Planets</h3>
-      {printListOfPlanets}
+      {/* Top Two boxes */}
+      <div className="boxContainer">
+        <div className="boxOne">
+          <h1>{film.title}</h1>
+          <h2>Director: {film.director}</h2>
+          <h2>Created At: {formattedDate}</h2>
+          <h2>Producer: {film.producer}</h2>
+          <h2>Release date: {film.release_date}</h2>
+        </div>
+        <div className="boxTwo">
+          <h4>&quot;{film.opening_crawl}&quot;</h4>
+        </div>
+        <div className="posterBox">
+          <div className="imageContainer">
+            <Image src={`/poster${film.episode_id}.jpg`} width={350} height={500} alt={`Star wars poster for ep ${film.episode_id}`} />
+          </div>
+        </div>
+      </div>
+
+      {/* Middle Two Boxes */}
+      <div className="boxContainer">
+        <div className="boxThree">
+          <h3>Characters</h3>
+          {printListOfChar}
+        </div>
+        <div className="boxFour">
+          <h3>Starships</h3>
+          {printListOfStarships}
+        </div>
+      </div>
+
+      {/* Bottom Three Boxes */}
+      <div className="boxContainer">
+        <div className="boxFive">
+          <h3>Species</h3>
+          {printListOfSpecies}
+        </div>
+        <div className="boxSix">
+          <h3>Vehicles</h3>
+          {printListOfVehicles}
+        </div>
+        <div className="boxSeven">
+          <h3>Planets</h3>
+          {printListOfPlanets}
+        </div>
+      </div>
 
       <div>
         <Link href="/films">

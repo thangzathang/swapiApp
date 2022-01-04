@@ -1,0 +1,93 @@
+.boxContainer {
+  min-height: 25rem;
+  //   padding: 2rem; -> No padding so that you can show border box.
+  border-radius: 8px;
+  overflow: hidden;
+
+  display: flex;
+  margin: 2.5rem 0;
+  box-shadow: 1px 0px 10px 5px;
+}
+
+// Top Boxes
+.boxOne {
+  //   border-bottom-left-radius: 8px;
+  //   border-top-left-radius: 8px;
+
+  color: black;
+  font-size: 1rem;
+  padding: 2rem 1rem;
+
+  flex-basis: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-image: url(../public/cardbackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.boxTwo {
+  overflow: hidden;
+
+  background-color: #ec8600;
+  padding: 2rem 2rem;
+
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+
+.posterBox {
+  //   border-bottom-right-radius: 8px;
+  //   border-top-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ec8600;
+  padding: 1rem 2rem;
+  flex-basis: 20%;
+}
+
+// Middle Boxes
+.boxThree {
+  padding: 1rem;
+  flex-basis: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxFour {
+  padding: 1rem;
+  flex-basis: 30%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Bottom
+.boxFive {
+  padding: 1rem;
+  flex-basis: 30%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxSix {
+  padding: 1rem;
+  flex-basis: 30%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxSeven {
+  padding: 1rem;
+  flex-basis: 30%;
+  display: flex;
+  flex-wrap: wrap;
+}
