@@ -3,6 +3,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import Card from "../../components/Card";
+
 const APILink = "https://swapi.dev/api/films/";
 
 export const getStaticPaths = async () => {
@@ -62,34 +64,6 @@ const FilmDetail = ({ film, characters, species, starships, vehicles, planets })
   let planetsUrl = [...planets];
   // let charactersList = [];
 
-  // Best attempt so far;
-  /*
-  charactersUrl.forEach((item) => {
-    console.log("Item is:", item);
-    const getChar = getData(item);
-    console.log("getChar is:", getChar);
-    getChar.then(function (res) {
-      console.log("Res is:", res.data);
-      charactersList.push(res.data);
-    });
-  });
-  */
-
-  // Straight up try tp print off the data
-  /*
-  const printListOfChars = charactersUrl.map((item, index) => {
-    const getChar = getData(item);
-    getChar.then(function (res) {
-      return <p key={item + index}>{res.data.name}</p>;
-    });
-
-    // const getChar = getData(item);
-    // getChar.then(function (res) {
-    // return <p key={item + index}>{item}</p>;
-    // });
-  });
-  */
-
   const printListOfChar = charactersUrl.map((item, index) => {
     return <h3 key={item + index}>{item}</h3>;
   });
@@ -109,30 +83,6 @@ const FilmDetail = ({ film, characters, species, starships, vehicles, planets })
   const printListOfPlanets = planetsUrl.map((item, index) => {
     return <h3 key={item + index}>{item}</h3>;
   });
-
-  // Singular print?
-  /*
-  const firstChar = getData(charactersList[0]);
-  const oneChar = firstChar.then(function (result) {
-    return result.data;
-  });
-
-  const printListOfChar = () => {
-    return <h1>{oneChar.name}</h1>;
-  };
-  */
-
-  // Get raw character and async await on that.
-  // characters.forEach(async (item) => {
-  //   const res = await fetch(item);
-  //   const data = await res.json();
-  //   console.log("Individual Data is:", data);
-  //   if (data && charactersList.push(await data.name)) {
-  //     console.log("Data is pushed");
-  //   }
-  // });
-
-  // For the display - best so far.
 
   return (
     <div className="primary">
@@ -156,32 +106,35 @@ const FilmDetail = ({ film, characters, species, starships, vehicles, planets })
       </div>
 
       {/* Middle Two Boxes */}
+      {/*
       <div className="boxContainer">
         <div className="boxThree">
-          <h3>Characters</h3>
+          <h3> See List of Character Button</h3>
           {printListOfChar}
+          <Card>{printListOfChar}</Card>
         </div>
         <div className="boxFour">
           <h3>Starships</h3>
           {printListOfStarships}
         </div>
       </div>
+      */}
 
       {/* Bottom Three Boxes */}
-      <div className="boxContainer">
+      {/* <div className="boxContainer">
         <div className="boxFive">
           <h3>Species</h3>
           {printListOfSpecies}
         </div>
         <div className="boxSix">
           <h3>Vehicles</h3>
-          {printListOfVehicles}
+          {printListOfVehicles}2
         </div>
         <div className="boxSeven">
           <h3>Planets</h3>
           {printListOfPlanets}
         </div>
-      </div>
+      </div> */}
 
       <div>
         <Link href="/films">
