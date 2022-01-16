@@ -96,7 +96,7 @@ const FilmDetail = ({ film, characters, species, starships, vehicles, planets })
           <h2>Release date: {film.release_date}</h2>
         </div>
         <div className="boxTwo">
-          <h4>&quot;{film.opening_crawl}&quot;</h4>
+          <h4>&quot;{film.opening_crawl}&quot; </h4>
         </div>
         <div className="posterBox">
           <div className="imageContainer">
