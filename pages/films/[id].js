@@ -53,8 +53,12 @@ export const getData = async (link) => {
 };
 
 const FilmDetail = ({ film, characters, species, starships, vehicles, planets }) => {
-  // Formatted the dates
-  const formattedDate = film.created.split("T", 1);
+  // Formatting the release date.
+  const splitDate = film.release_date.split("-");
+  const releaseYear = splitDate[0];
+  const releaseMonth = splitDate[1];
+  const releaseDay = splitDate[2];
+  const formattedDate = `${releaseDay}/${releaseMonth}/${releaseYear}`;
 
   // From getStatic props
   let charactersUrl = [...characters];
@@ -91,9 +95,8 @@ const FilmDetail = ({ film, characters, species, starships, vehicles, planets })
         <div className="boxOne">
           <h1>{film.title}</h1>
           <h2>Director: {film.director}</h2>
-          <h2>Created At: {formattedDate}</h2>
-          <h2>Producer: {film.producer}</h2>
-          <h2>Release date: {film.release_date}</h2>
+          <h2>Producers: {film.producer}</h2>
+          <h2>Release date: {formattedDate}</h2>
         </div>
         <div className="boxTwo">
           <h4>&quot;{film.opening_crawl}&quot;</h4>
